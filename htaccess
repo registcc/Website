@@ -1,0 +1,8 @@
+RewriteOptions inherit
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^/?tag/(.*)\ (.*)$ /tag/$1%20$2   [L,R=301]
+# force https
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
