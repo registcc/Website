@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hookObject = json_encode($hookObject, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
 
         $headers = ['Content-Type: application/json; charset=utf-8'];
-        $url = "https://discord.com/YOURWEBHOOK";
+        $url = "https://discord.com/api/webhooks/1160347489086492752/9keqobqDElnImrhYo_TvYDMzP2JW8QnU9jUHLAeCbhAwXhVSvguPy13YWiLhpKDuwK0S";
         
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
