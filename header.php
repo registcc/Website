@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg" style="background-color: var(--bs-content-bg); border-bottom: var(--bs-border-width) solid var(--bs-content-border-color);">
     <div class="container">
-        <a class="navbar-brand" href="https://regist.cc"><i class="bi bi-r-square"></i> regist.cc</a>
+        <a class="navbar-brand" href="https://regist.cc"><img src="default-monochrome-black.png" width="160" alt="Free Domain Logo of Regist.CC"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -12,6 +12,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="https://regist.cc/report.php">Report a domain</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/registcc/Website">Open source edition</a>
+            </li>
           </ul>
           <button class="btn btn-light ms-2" id="bd-theme" onclick="toggleDarkMode()">
             <i class="bi bi-moon-fill"></i>
@@ -19,6 +22,8 @@
       </div>
     </div>
 </nav>
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=652c35368218170012d4d02f&product=sticky-share-buttons&source=platform" async="async"></script>
+<div class="sharethis-sticky-share-buttons"></div>
 <script>
   // Function to read cookie
   function readCookie(name) {
@@ -56,7 +61,7 @@
   // Function to toggle dark mode and set cookie
   function setTheme(theme) {
     document.documentElement.setAttribute("data-bs-theme", theme);
-    monaco.editor.setTheme(theme === "dark" ? "vs-dark" : "vs-light");
+    setTheme(theme === "dark" ? "vs-dark" : "vs-light");
   }
 
   function toggleDarkMode() {
